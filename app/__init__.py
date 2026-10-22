@@ -13,7 +13,7 @@ def create_app():
     app = Flask(__name__)
     
     # Configuration
-    app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-secret-key')
+    app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
     
     # Determine deployment mode and configure database accordingly
     deployment_mode = os.getenv('DEPLOYMENT_MODE', 'local').lower()
